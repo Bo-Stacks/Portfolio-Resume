@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { height: 100%; }
+
+small custom styles 
+.card-glow {
+  background: linear-gradient(135deg, rgba(124,77,255,0.08), rgba(0,255,198,0.03));
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+}
+
+body {
+  background-color: theme('colors.background');
+  color: theme('colors.text');
+  font-family: theme('fontFamily.sans');
+}
+
+.card {
+  background-color: theme('colors.surface');
+  border-radius: 1rem;
+  box-shadow: theme('boxShadow.soft');
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 25px rgba(124, 77, 255, 0.3);
+}
+
+.btn-primary {
+  background-color: theme('colors.primary');
+  color: black;
+  border-radius: 9999px;
+  padding: 0.5rem 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: theme('colors.accent');
+  color: white;
+}

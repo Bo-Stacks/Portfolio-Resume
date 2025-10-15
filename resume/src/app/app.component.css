@@ -1,0 +1,11 @@
+:host { display: block }
+
+/* subtle entrance animation */
+@keyframes floaty {
+  0% { transform: translateY(0) }
+  50% { transform: translateY(-6px) }
+  100% { transform: translateY(0) }
+}
+img[alt='avatar'] { animation: floaty 4s ease-in-out infinite }
+
+a:hover { filter: drop-shadow(0 6px 10px rgba(124,77,255,0.18)) }
