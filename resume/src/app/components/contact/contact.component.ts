@@ -8,14 +8,12 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
-  name = '';
-  email = '';
-  message = '';
-
-  submitForm() {
-    console.log('Contact form submitted:', { name: this.name, email: this.email, message: this.message });
-    alert('Thank you for reaching out, ' + this.name + '! Your message has been received.');
-    this.name = this.email = this.message = '';
-  }
-
+  contactInfo = {
+    name: 'Beau Matsobane Monese',
+    title: 'Software Engineer',
+    email: 'beaumonesem@gmail.com',
+    phone: '+27677309589',
+    location: 'Centurion, Pretoria',
+    linkedin: 'www.linkedin.com/in/beau-monese-3888y4166'
+  };
 }

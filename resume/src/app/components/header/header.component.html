@@ -1,0 +1,99 @@
+<header class="fixed w-full bg-surface border-b border-accent/20 z-50 shadow-glow">
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <a routerLink="/" class="text-xl font-bold text-primary text-glow">Beau Monese</a>
+    
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:block">
+      <ul class="flex space-x-8">
+        <li>
+          <a routerLink="/" 
+             routerLinkActive="nav-active" 
+             class="text-text hover:text-primary transition-all duration-300 font-medium">
+            Home
+          </a>
+        </li>
+        <li>
+          <a routerLink="/about" 
+             routerLinkActive="nav-active" 
+             class="text-text hover:text-primary transition-all duration-300 font-medium">
+            About
+          </a>
+        </li>
+        <li>
+          <a routerLink="/projects" 
+             routerLinkActive="nav-active" 
+             class="text-text hover:text-primary transition-all duration-300 font-medium">
+            Projects
+          </a>
+        </li>
+        <li>
+          <a routerLink="/skills" 
+             routerLinkActive="nav-active" 
+             class="text-text hover:text-primary transition-all duration-300 font-medium">
+            Skills
+          </a>
+        </li>
+        <li>
+          <a routerLink="/contact" 
+             routerLinkActive="nav-active" 
+             class="text-text hover:text-primary transition-all duration-300 font-medium">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden text-xl text-text hover:text-primary transition-colors" (click)="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div *ngIf="isMenuOpen" class="md:hidden bg-surface border-t border-accent/20 shadow-glow">
+    <div class="container mx-auto px-4 py-4">
+      <ul class="space-y-4">
+        <li>
+          <a routerLink="/" 
+             routerLinkActive="nav-active" 
+             class="block py-3 text-text hover:text-primary transition-all duration-300 font-medium text-center"
+             (click)="closeMenu()">
+            Home
+          </a>
+        </li>
+        <li>
+          <a routerLink="/about" 
+             routerLinkActive="nav-active" 
+             class="block py-3 text-text hover:text-primary transition-all duration-300 font-medium text-center"
+             (click)="closeMenu()">
+            About
+          </a>
+        </li>
+        <li>
+          <a routerLink="/projects" 
+             routerLinkActive="nav-active" 
+             class="block py-3 text-text hover:text-primary transition-all duration-300 font-medium text-center"
+             (click)="closeMenu()">
+            Projects
+          </a>
+        </li>
+        <li>
+          <a routerLink="/skills" 
+             routerLinkActive="nav-active" 
+             class="block py-3 text-text hover:text-primary transition-all duration-300 font-medium text-center"
+             (click)="closeMenu()">
+            Skills
+          </a>
+        </li>
+        <li>
+          <a routerLink="/contact" 
+             routerLinkActive="nav-active" 
+             class="block py-3 text-text hover:text-primary transition-all duration-300 font-medium text-center"
+             (click)="closeMenu()">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

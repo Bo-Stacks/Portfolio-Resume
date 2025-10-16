@@ -1,4 +1,6 @@
-<nav class="flex justify-between items-center px-8 py-4 bg-surface text-text sticky top-0 z-50 shadow-soft">
+<div class="min-h-screen bg-gray-50">
+  <app-header></app-header>
+<!-- <nav class="flex justify-between items-center px-8 py-4 bg-surface text-text sticky top-0 z-50 shadow-soft">
   <div class="flex items-center gap-3">
     <img src="/assets/logo.svg" alt="logo" class="w-8 h-8" />
     <span class="text-primary font-bold">Beau Monese</span>
@@ -12,8 +14,17 @@
   <button (click)="toggleTheme()" class="ml-6 text-sm border px-3 py-1 rounded-full hover:bg-primary hover:text-black transition">
     {{ isDarkMode ? '☀️ Light' : '🌙 Dark' }}
   </button>
-</nav>
+</nav>-->
+
 
 <main [@routeAnimations]="prepareRoute(outlet)" class="p-8 transition-colors duration-500 bg-background text-text">
   <router-outlet #outlet="outlet"></router-outlet>
-</main>
+</main> 
+
+
+  
+  <!-- <main>
+    <router-outlet></router-outlet>
+  </main> -->
+  <app-footer></app-footer>
+</div>

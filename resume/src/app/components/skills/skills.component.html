@@ -1,0 +1,81 @@
+<section class="min-h-screen pt-20 pb-12 section-blue">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-16 text-sectiontext">Skills & Education</h2>
+    
+    <!-- Education -->
+    <div class="mb-20">
+      <h3 class="text-3xl font-bold mb-12 text-sectiontext border-b-2 border-primary pb-3">Education</h3>
+      <div class="custom-card p-8 rounded-2xl shadow-soft">
+        <div *ngFor="let edu of education; let last = last" [class.mb-10]="!last">
+          <h4 class="text-2xl font-bold text-primary mb-3">{{ edu.qualification }}</h4>
+          <p class="text-text mb-8 leading-relaxed font-semibold">{{ edu.institution }}</p>
+          <p class="text-text mb-8 leading-relaxed/70">{{ edu.location }}</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Skills -->
+    <div class="mb-20">
+      <h3 class="text-3xl font-bold mb-12 text-sectiontext border-b-2 border-primary pb-3">Skills</h3>
+      
+      <!-- Programming Languages -->
+      <div class="mb-16">
+        <h4 class="text-2xl font-bold mb-8 text-sectiontext">Programming Languages</h4>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          <div *ngFor="let lang of programmingLanguages" 
+               class="custom-card p-6 rounded-xl shadow-soft text-center hover-lift hover:shadow-glow transition-all">
+            <i [class]="lang.icon + ' text-5xl mb-4 skill-icon'"></i>
+            <p class="text-text mb-8 leading-relaxed font-semibold">{{ lang.name }}</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Embedded Systems and IoT -->
+      <div class="mb-16">
+        <h4 class="text-2xl font-bold mb-8 text-sectiontext">Embedded Systems and IoT</h4>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div *ngFor="let system of embeddedSystems" 
+               class="custom-card p-6 rounded-xl shadow-soft text-center hover-lift hover:shadow-glow transition-all">
+            <i [class]="system.icon + ' text-5xl mb-4 skill-icon'"></i>
+            <p class="text-text mb-8 leading-relaxed font-semibold">{{ system.name }}</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Web Application Framework -->
+      <div class="mb-16">
+        <h4 class="text-2xl font-bold mb-8 text-sectiontext">Web Application Framework</h4>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div *ngFor="let framework of webFrameworks" 
+               class="custom-card p-6 rounded-xl shadow-soft text-center hover-lift hover:shadow-glow transition-all">
+            <i [class]="framework.icon + ' text-5xl mb-4 skill-icon'"></i>
+            <p class="text-text mb-8 leading-relaxed font-semibold">{{ framework.name }}</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Code Repo management -->
+      <div>
+        <h4 class="text-2xl font-bold mb-8 text-sectiontext">Code Repo Management</h4>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div *ngFor="let tool of codeManagement" 
+               class="custom-card p-6 rounded-xl shadow-soft text-center hover-lift hover:shadow-glow transition-all">
+            <i [class]="tool.icon + ' text-5xl mb-4 skill-icon'"></i>
+            <p class="text-text mb-8 leading-relaxed font-semibold">{{ tool.name }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Training and Professional Development -->
+    <div>
+      <h3 class="text-3xl font-bold mb-12 text-sectiontext border-b-2 border-primary pb-3">Training and Professional Development</h3>
+      <div class="custom-card p-8 rounded-2xl shadow-soft">
+        <div *ngFor="let course of training; let last = last" [class.mb-8]="!last">
+          <h4 class="text-xl font-bold text-primary mb-3">{{ course.course }}</h4>
+          <p class="text-text mb-8 leading-relaxed font-medium">{{ course.provider }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

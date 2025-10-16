@@ -1,7 +1,53 @@
-<h2 class="text-3xl font-semibold mb-6 text-primary text-center">Contact Me</h2>
-<form (ngSubmit)="submitForm()" class="space-y-4 max-w-md mx-auto">
-  <input type="text" [(ngModel)]="name" name="name" placeholder="Your Name" class="w-full p-3 rounded-md bg-surface text-text focus:ring-2 focus:ring-primary" required />
-  <input type="email" [(ngModel)]="email" name="email" placeholder="Your Email" class="w-full p-3 rounded-md bg-surface text-text focus:ring-2 focus:ring-primary" required />
-  <textarea [(ngModel)]="message" name="message" placeholder="Your Message" class="w-full p-3 rounded-md bg-surface text-text focus:ring-2 focus:ring-primary" rows="5" required></textarea>
-  <button type="submit" class="btn-primary w-full">Send Message</button>
-</form>
+<section class="min-h-screen pt-20 pb-12 gradient-bg">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-16 text-primary">Contact</h2>
+    <div class="max-w-2xl mx-auto custom-card p-10 rounded-2xl shadow-soft backdrop-blur-sm">
+      <div class="text-center mb-12">
+        <h3 class="text-3xl font-bold mb-4 text-primary text-glow">{{ contactInfo.name }}</h3>
+        <p class="text-xl text-accent font-semibold">{{ contactInfo.title }}</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="flex items-center p-6 bg-surface/50 rounded-xl border border-accent/10 hover:border-accent/30 transition-all">
+          <i class="fas fa-envelope text-primary mr-5 text-2xl"></i>
+          <div>
+            <p class="font-bold text-text text-lg">Email</p>
+            <a [href]="'mailto:' + contactInfo.email" class="text-text/80 hover:text-primary transition-colors">
+              {{ contactInfo.email }}
+            </a>
+          </div>
+        </div>
+        
+        <div class="flex items-center p-6 bg-surface/50 rounded-xl border border-accent/10 hover:border-accent/30 transition-all">
+          <i class="fas fa-phone text-primary mr-5 text-2xl"></i>
+          <div>
+            <p class="font-bold text-text text-lg">Phone</p>
+            <a [href]="'tel:' + contactInfo.phone" class="text-text/80 hover:text-primary transition-colors">
+              {{ contactInfo.phone }}
+            </a>
+          </div>
+        </div>
+        
+        <div class="flex items-center p-6 bg-surface/50 rounded-xl border border-accent/10 hover:border-accent/30 transition-all">
+          <i class="fas fa-map-marker-alt text-primary mr-5 text-2xl"></i>
+          <div>
+            <p class="font-bold text-text text-lg">Location</p>
+            <p class="text-text/80">{{ contactInfo.location }}</p>
+          </div>
+        </div>
+        
+        <div class="flex items-center p-6 bg-surface/50 rounded-xl border border-accent/10 hover:border-accent/30 transition-all">
+          <i class="fab fa-linkedin text-primary mr-5 text-2xl"></i>
+          <div>
+            <p class="font-bold text-text text-lg">LinkedIn</p>
+            <a [href]="'https://' + contactInfo.linkedin" 
+               target="_blank"
+               class="text-text/80 hover:text-primary transition-colors">
+              {{ contactInfo.linkedin }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

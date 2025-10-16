@@ -10,13 +10,21 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { AboutComponent } from './components/about/about.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
     HomeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    HeaderComponent,
+    FooterComponent,
+    AboutComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

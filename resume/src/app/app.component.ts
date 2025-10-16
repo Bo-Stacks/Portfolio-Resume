@@ -10,6 +10,7 @@ import { slideInAnimation } from './route-animations';
   animations: [slideInAnimation]
 })
 export class AppComponent {
+  title = 'Beau Monese - Portfolio';
  @HostBinding('class.dark') isDarkMode = true;
 
   toggleTheme() {

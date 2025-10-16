@@ -8,13 +8,13 @@ import { Component, HostListener } from '@angular/core';
 })
 export class HomeComponent {
 
-  x = 0;
-  y = 0;
-
-  @HostListener('document:mousemove', ['$event'])
-  onMouseMove(event: MouseEvent) {
-    this.x = (event.clientX / window.innerWidth - 0.5) * 20;
-    this.y = (event.clientY / window.innerHeight - 0.5) * 20;
-  }
-
+  profile = {
+    name: 'Beau Matsobane Monese',
+    title: 'Software Engineer',
+    description: [
+      'I am a logical and analytical thinker with a strong passion for advancing my engineering career and mastering new technologies. As an aspiring Full-Stack Engineer, I bring expertise in hardware design, firmware, backend, and frontend development, along with project management (Jira, Trello, SCRUM, Agile) and technical problem-solving.',
+      'Proficient in tools such as Visual Studio, VS Code, and Docker, I have extensive experience with relational databases (MSSQL, MySQL, SQLite) and non-relational databases (Firebase). My skills also include requirement gathering, documentation, UML design, and white-box/black-box testing.',
+      'I excel at communicating complex technical concepts to diverse stakeholders and am eager to contribute to innovative projects in a dynamic, growth-oriented environment.'
+    ]
+  };
 }

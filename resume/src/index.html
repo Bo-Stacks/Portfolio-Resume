@@ -2,14 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Resume</title>
+  <title>Beau Monese - Portfolio</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+  <!-- Load Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Load Devicon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  
+  <!-- Load Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Optional: Custom Tailwind config -->
+  <script>
+    tailwind.config = {
+      content: ["./src/**/*.{html,ts,tsx,js,jsx}"],
+      theme: {
+        extend: {
+          colors: {
+            background: '#FFFFFF',
+            surface: '#121212',
+            primary: '#00FFC6',
+            accent: '#7C4DFF',
+            text: '#EAEAEA',
+            section: '#1E3A8A',
+            sectiontext: '#0F172A'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Poppins', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 4px 20px rgba(124, 77, 255, 0.15)',
+            glow: '0 0 20px rgba(0, 255, 198, 0.3)'
+          },
+          backgroundImage: {
+            'sunrise': 'linear-gradient(135deg, #0A0A0A 0%, #1a1a2e 50%, #16213e 100%)'
+          }
+        },
+      }
+    }
+  </script>
+
 </head>
-<body class="bg-black text-white antialiased">
+<body>
   <app-root></app-root>
 </body>
 </html>

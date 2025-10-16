@@ -1,8 +1,31 @@
-<h2 class="text-3xl font-semibold mb-8 text-primary">Projects</h2>
-<div class="grid md:grid-cols-2 gap-6">
-  <div *ngFor="let p of projects" class="card p-6">
-    <h3 class="font-semibold text-accent">{{p.name}}</h3>
-    <p class="text-gray-300 text-sm mt-2">{{p.desc}}</p>
-    <a [href]="p.url" target="_blank" class="btn-primary inline-block mt-4">View Project</a>
+<section class="min-h-screen pt-20 pb-12 gradient-bg">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-16 text-primary">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <div *ngFor="let project of projects" class="custom-card rounded-2xl shadow-soft overflow-hidden hover-lift hover:shadow-glow transition-all duration-300">
+        <div class="p-8">
+          <div class="flex justify-between items-start mb-6">
+            <h3 class="text-xl font-bold text-primary">{{ project.name }}</h3>
+            <span class="text-sm bg-accent/20 text-accent px-4 py-2 rounded-full font-semibold">{{ project.period }}</span>
+          </div>
+          <p class="text-text mb-8 leading-relaxed font-semibold">
+            {{ project.description }}
+          </p>
+          <a *ngIf="project.link" 
+             [href]="project.link" 
+             target="_blank"
+             class="text-primary hover:text-primary/80 transition-colors flex items-center font-semibold group">
+            <i class="fas fa-external-link-alt mr-3 group-hover:translate-x-1 transition-transform"></i> 
+            View Project
+          </a>
+          <span *ngIf="!project.link" class="text-text/50 flex items-center">
+            <i class="fas fa-lock mr-3"></i> 
+            Private Project
+          </span>
+        </div>
+      </div>
+      
+    </div>
   </div>
-</div>
+</section>

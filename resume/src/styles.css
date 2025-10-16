@@ -1,44 +1,83 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
+@import 'https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root { height: 100%; }
 
-small custom styles 
-.card-glow {
-  background: linear-gradient(135deg, rgba(124,77,255,0.08), rgba(0,255,198,0.03));
-  border-radius: 20px;
-  backdrop-filter: blur(6px);
+/* html, body, #root { height: 100%; } */
+/* Custom styles */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: theme('colors.background');
-  color: theme('colors.text');
-  font-family: theme('fontFamily.sans');
+  margin: 0;
+  padding: 0;
+  background: #0A0A0A;
 }
 
-.card {
-  background-color: theme('colors.surface');
-  border-radius: 1rem;
-  box-shadow: theme('boxShadow.soft');
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.section {
+  min-height: 100vh;
+  padding-top: 80px;
 }
 
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 25px rgba(124, 77, 255, 0.3);
+/* Custom animations */
+.hover-lift {
+  transition: transform 0.2s ease-in-out;
 }
 
-.btn-primary {
-  background-color: theme('colors.primary');
-  color: black;
-  border-radius: 9999px;
-  padding: 0.5rem 1.25rem;
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+.skill-icon {
   transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-  background-color: theme('colors.accent');
-  color: white;
+.skill-icon:hover {
+  transform: scale(1.1);
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, #0A0A0A 0%, #1a1a2e 50%, #16213e 100%);
+}
+
+.section-blue {
+  background: linear-gradient(135deg, #1E3A8A 0%, #1e40af 50%, #1d4ed8 100%);
+}
+
+/* Text glow effects */
+.text-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 198, 0.5);
+}
+
+/* Card styles with new color scheme */
+.custom-card {
+  background: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(124, 77, 255, 0.1);
+}
+
+/* Navigation active state */
+.nav-active {
+  color: #00FFC6;
+  text-shadow: 0 0 8px rgba(0, 255, 198, 0.5);
 }

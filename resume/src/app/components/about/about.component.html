@@ -1,0 +1,57 @@
+<section class="min-h-screen pt-20 pb-12 section-blue">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-16 text-sectiontext">Professional Experience & References</h2>
+    
+    <!-- Professional Experience -->
+    <div class="mb-20">
+      <h3 class="text-3xl font-bold mb-12 text-text leading-relaxed border-b-2 border-primary pb-3">Professional Experience</h3>
+      
+      <div *ngFor="let exp of experiences" class="custom-card p-8 rounded-2xl shadow-soft mb-10 hover-lift">
+        <div class="flex flex-col md:flex-row justify-between mb-6">
+          <h4 class="text-2xl font-bold text-primary">{{ exp.company }}</h4>
+          <span class="text-text leading-relaxed/80 font-medium">{{ exp.period }}</span>
+        </div>
+        <p class="text-xl text-accent mb-4 font-semibold">{{ exp.position }}</p>
+        <p class="text-text leading-relaxed/70 mb-8 font-medium">{{ exp.location }}</p>
+        
+        <div class="mb-8">
+          <h5 class="font-bold text-text leading-relaxed mb-4 text-xl flex items-center">
+            <i class="fas fa-cogs text-primary mr-3"></i>
+            Technical Expertise
+          </h5>
+          <ul class="space-y-3">
+            <li *ngFor="let expertise of exp.technicalExpertise" class="text-text leading-relaxed flex items-start">
+              <i class="fas fa-chevron-right text-primary mr-3 mt-1 text-sm"></i>
+              {{ expertise }}
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h5 class="font-bold text-text leading-relaxed mb-4 text-xl flex items-center">
+            <i class="fas fa-tasks text-primary mr-3"></i>
+            Key Responsibilities
+          </h5>
+          <ul class="space-y-3">
+            <li *ngFor="let responsibility of exp.responsibilities" class="text-text leading-relaxed flex items-start">
+              <i class="fas fa-chevron-right text-primary mr-3 mt-1 text-sm"></i>
+              {{ responsibility }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- References -->
+    <div>
+      <h3 class="text-3xl font-bold mb-12 text-text leading-relaxed border-b-2 border-primary pb-3">References</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div *ngFor="let ref of references" class="custom-card p-6 rounded-xl shadow-soft hover-lift hover:shadow-glow transition-all">
+          <h4 class="font-bold text-lg text-primary mb-3">{{ ref.name }}</h4>
+          <p class="text-text leading-relaxed/80 mb-4 font-medium">{{ ref.position }}</p>
+          <p class="text-text leading-relaxed">{{ ref.contact }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

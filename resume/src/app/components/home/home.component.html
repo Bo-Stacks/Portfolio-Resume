@@ -1,17 +1,20 @@
-<section class="relative h-[70vh] flex flex-col items-center justify-center overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-br from-black via-transparent to-[#020617] dark:from-white dark:via-transparent dark:to-gray-100"></div>
-
-  <div class="relative z-10 text-center" [ngStyle]="{'transform': 'translate(' + x/2 + 'px,' + y/2 + 'px)'}">
-    <h1 class="text-5xl md:text-6xl font-bold text-primary mb-4 transition-transform duration-200">Beau Matsobane Monese</h1>
-    <p class="text-gray-400 dark:text-gray-700 mb-6 text-lg">Software Engineer • Embedded Systems • Go Developer</p>
-    <div class="flex flex-wrap gap-4 justify-center">
-      <a href="https://www.linkedin.com/in/beau-monese-388874166" target="_blank" class="btn-primary">LinkedIn</a>
-      <a href="https://github.com/YOUR_GITHUB" target="_blank" class="btn-primary">GitHub</a>
-      <a href="mailto:beaumonesem@gmail.com" class="btn-primary">Email</a>
+<section class="min-h-screen flex items-center pt-16">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">{{ profile.name }}</h1>
+      <h2 class="text-2xl md:text-3xl text-blue-600 mb-8">{{ profile.title }}</h2>
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <p *ngFor="let paragraph of profile.description" 
+           class="text-lg mb-4 text-gray-700 leading-relaxed">
+          {{ paragraph }}
+        </p>
+      </div>
+      <div class="mt-8">
+        <a routerLink="/about" 
+           class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-block">
+          Learn More About Me
+        </a>
+      </div>
     </div>
-  </div>
-
-  <div class="absolute z-0 w-full h-full flex justify-center items-center opacity-30 pointer-events-none">
-    <img src="/assets/logo.svg" alt="bg logo" class="w-96 animate-pulse" [ngStyle]="{'transform': 'translate(' + (-x) + 'px,' + (-y) + 'px)'}">
   </div>
 </section>
